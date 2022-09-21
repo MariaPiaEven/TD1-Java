@@ -1,6 +1,8 @@
 package models;
 
-public class Voiture extends Vehicule{
+import models.Vehicule;
+
+public class Voiture extends Vehicule {
 
     private int nombreDeChevaux;
 

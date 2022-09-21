@@ -1,12 +1,18 @@
 package models;
 
-public class Bus extends Vehicule{
+import models.Vehicule;
+
+public class Bus extends Vehicule {
 
     private int nombreDePassenger;
 
     public Bus(String marque, int nombreDeRoue, int nombreDePassenger) {
         super(nombreDeRoue, marque);
         this.nombreDePassenger = nombreDePassenger;
+    }
+
+    public int coutMaintenanceRoue(){
+        return nombreDeRoue * 500;
     }
 
     public int getNombreDePassenger() {
@@ -16,4 +22,6 @@ public class Bus extends Vehicule{
     public void setNombreDePassenger(int nombreDePassenger) {
         this.nombreDePassenger = nombreDePassenger;
     }
+
+
 }

@@ -2,9 +2,9 @@ package models;
 
 public class Vehicule {
 
-    private int nombreDeRoue;
+    protected int nombreDeRoue;
 
-    private String marque;
+    protected String marque;
 
 
     public Vehicule(int nombreDeRoue, String marque) {

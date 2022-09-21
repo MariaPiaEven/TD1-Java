@@ -1,20 +1,37 @@
-import models.*;
+import models.Bus;
+import models.Garage;
+import models.Voiture;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.HashSet;
 
 public class Principale {
 
     public static void main(String[] args) {
 
-        Vehicule vehicule = new Vehicule(4, "fiat");
+        Garage superGarage = new Garage("Super garage !");
 
-        Voiture voiture = new Voiture("fiat", 34);
+        Voiture reno = new Voiture("Reno", 45);
 
-        Bus bus = new Bus("Mercedes",6, 10);
+        superGarage.ajoutVoiture(
+                reno,
+                new Voiture("Toytoy", 21),
+                new Voiture("Merko", 90)
+        );
 
-        System.out.println(voiture.fraisKilometrique(4000));
+        HashSet<Voiture> listeVoiture = new HashSet<>();
+        listeVoiture.add(reno);
+        listeVoiture.add(reno);
+        listeVoiture.add(new Voiture("Mini", 32));
 
-        System.out.println(vehicule.info());
+        System.out.println(listeVoiture.size());
 
-        System.out.println(bus.info());
+        HashMap<String, Voiture> mapVoiture = new HashMap<>();
+        mapVoiture.put("Reno", reno);
+        mapVoiture.put("Mini", new Voiture("Mini", 32));
 
+        System.out.println(mapVoiture.get("Mini").getNombreDeChevaux());
     }
+
 }

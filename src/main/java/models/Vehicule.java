@@ -27,4 +27,13 @@ public class Vehicule {
     public void setMarque(String marque) {
         this.marque = marque;
     }
+
+    public String info(){
+        return "Vehicule a " + nombreDeRoue + " roues";
+    }
+
+
 }
+
+
+

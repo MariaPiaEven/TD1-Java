@@ -24,4 +24,8 @@ public class Voiture extends Vehicule{
     }
 
 
+    @Override
+    public String info() {
+        return "C'est une voiture à 4 roues";
+    }
 }
